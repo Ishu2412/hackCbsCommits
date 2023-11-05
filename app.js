@@ -5,6 +5,7 @@ import session from "express-session";
 import fetch from "node-fetch";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import "dotenv/config";
 
 const app = express();
 const port = process.env.PORT || 3000;
