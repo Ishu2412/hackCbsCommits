@@ -5,15 +5,16 @@ import session from "express-session";
 import fetch from "node-fetch";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
+import cors from "cors";
 import "dotenv/config";
-
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // Configure session middleware
 app.use(
   session({
-    secret: "c00b8d5dfe1ad4c26b05265073d777dd6637451c",
+    secret: "2aef75fa43875ffbdc00e866331565c1f217e588",
     resave: false,
     saveUninitialized: true,
   })
@@ -27,8 +28,8 @@ app.use(express.static(__dirname + "/views")); //to add css files
 passport.use(
   new GitHubStrategy(
     {
-      clientID: "b1967e670e6e4183b0f1", // Replace with your GitHub OAuth App's Client ID
-      clientSecret: "c00b8d5dfe1ad4c26b05265073d777dd6637451c", // Replace with your GitHub OAuth App's Client Secret
+      clientID: "8fb1e0aecf569312cdfe", // Replace with your GitHub OAuth App's Client ID
+      clientSecret: "2aef75fa43875ffbdc00e866331565c1f217e588", // Replace with your GitHub OAuth App's Client Secret
       callbackURL: "http://localhost:3000/auth/github/callback",
     },
     (accessToken, refreshToken, profile, done) => {
