@@ -8,7 +8,7 @@ import { fileURLToPath } from "url";
 import cors from "cors";
 import "dotenv/config";
 const app = express();
-app.use(cors());
+app.use(cors({credentials : true, origin: 'http://localhost:5173', }))
 const port = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // Configure session middleware
