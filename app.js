@@ -5,10 +5,10 @@ import session from "express-session";
 import fetch from "node-fetch";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import cors from "cors";
+//import cors from "cors";
 import "dotenv/config";
 const app = express();
-app.use(cors({credentials : true, origin: 'http://localhost:5173', }))
+//app.use(cors({credentials : true, origin: 'http://localhost:5173', }))
 const port = process.env.PORT || 3000;
 const __dirname = dirname(fileURLToPath(import.meta.url));
 // Configure session middleware
