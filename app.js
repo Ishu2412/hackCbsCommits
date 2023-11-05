@@ -30,7 +30,7 @@ passport.use(
     {
       clientID: "8fb1e0aecf569312cdfe", // Replace with your GitHub OAuth App's Client ID
       clientSecret: "2aef75fa43875ffbdc00e866331565c1f217e588", // Replace with your GitHub OAuth App's Client Secret
-      callbackURL: "http://localhost:3000/auth/github/callback",
+      callbackURL: "https://hackcbscommits.onrender.com/auth/github/callback",
     },
     (accessToken, refreshToken, profile, done) => {
       // Store user profile information or perform other actions as needed
